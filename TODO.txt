@@ -1,0 +1,6 @@
+TODO.txt
+
+Handle break connection (heartbeat)
+implement map reduce
+handle sending code and text via sockets
+logging

@@ -41,6 +41,9 @@ def main(argv):
         master_instance = Master(inputfile)
     else:
         slave_instance = Slave(inputfile)
+        slave_instance.send("hello")
+        slave_instance.send("World")
+        slave_instance.dissconect()
 
 
 if __name__ == "__main__":
