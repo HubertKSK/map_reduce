@@ -24,7 +24,7 @@ def main(argv):
                 arg = Path(arg).resolve(strict=True)
             except FileNotFoundError:
                 # doesn't exist
-                print("ERROR\nFILE NOT EXIST")
+                print(f"ERROR\nFILE {arg} NOT EXIST")
                 exit()
             else:
                 # exists
@@ -40,9 +40,9 @@ def main(argv):
     if flag == 'master':
         master_instance = Master(inputfile)
     else:
-        slave_instance = Slave(inputfile)
-        slave_instance.send("hello")
-        slave_instance.send("World")
+        slave_instance = Slave()
+        slave_instance.listen()
+        slave_instance.listen()
         slave_instance.dissconect()
 
 
