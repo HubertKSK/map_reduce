@@ -36,8 +36,8 @@ def main(argv):
                 print("ERROR\nBad flag")
                 exit()
     print(f'flag:{flag}')
-    print(f"Input_file:'{inputfile}'")
     if flag == 'master':
+        print(f"Input_file:'{inputfile}'")
         master_instance = Master(inputfile)
     else:
         slave_instance = Slave()
